@@ -1,0 +1,2 @@
+# AuthApp
+Basic Authorization Service
