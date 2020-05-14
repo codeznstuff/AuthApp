@@ -1,0 +1,45 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# IDEs
+.idea/tasks.xml
+.idea/workspace.xml
+.idea/codeStyles/**
+.idea/dataSources/**
+.idea/dataSources*
+.idea/inspectionProfiles/**
+
+*.sublime-workspace
+.vscode/**
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+*.tgz
+
+# Yarn
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+# Yarn Integrity file
+.yarn-integrity
+
+tools/db.json
+
+*.swp

@@ -1,0 +1,17 @@
+[
+  {
+    "env": "localdev",
+    "uiHostname": "localhost",
+    "authConfig": {
+      "clientId": "",
+      "authority": "",
+      "tenant": "",
+      "redirectUri": "",
+      "cacheLocation": ""
+    },
+    "scopes": [""],
+    "apiClientId": "",
+    "apiBaseUrl": "https://localhost:5001",
+    "authorizationBaseUrl": "https://localhost:5001"
+  }
+]

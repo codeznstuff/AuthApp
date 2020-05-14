@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageAlerts when alerts do not exist matches snapshot 1`] = `null`;
+
+exports[`PageAlerts when alerts exist matches snapshot 1`] = `
+<div
+  class="wrapper"
+>
+  <div
+    class="alertsColumn"
+  >
+    <div
+      class="fade alert alert-success show"
+      role="alert"
+    >
+      success
+    </div>
+    <div
+      class="fade alert alert-warning show"
+      role="alert"
+    >
+      warning
+    </div>
+  </div>
+</div>
+`;

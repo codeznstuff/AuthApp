@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.alertsColumn {
+  position: absolute;
+  z-index: 100;
+  padding-top: 12px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}

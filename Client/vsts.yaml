@@ -1,0 +1,58 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - release/*
+
+queue:
+  name: Hosted VS2017
+  demands: npm
+
+steps:
+  - task: NodeTool@0
+    displayName: 'Use Node 10.15.3'
+    inputs:
+      versionSpec: 10.15.3
+
+  - task: Npm@1
+    displayName: 'npm install'
+    inputs:
+      verbose: false
+
+  - task: Npm@1
+    displayName: Lint
+    inputs:
+      command: custom
+      verbose: false
+      customCommand: 'run lint'
+
+  - task: Npm@1
+    displayName: Test
+    inputs:
+      command: custom
+      verbose: false
+      customCommand: 'run citest'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results **\junit.xml'
+    inputs:
+      testResultsFiles: '**\junit.xml'
+
+  - task: PublishCodeCoverageResults@1
+    displayName: 'Publish code coverage from **\cobertura-coverage.xml'
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: '**\cobertura-coverage.xml'
+
+  - task: Npm@1
+    displayName: 'npm prod-build'
+    inputs:
+      command: custom
+      verbose: false
+      customCommand: 'run build'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: ui_app'
+    inputs:
+      PathtoPublish: '$(System.DefaultWorkingDirectory)\build\'
+      ArtifactName: 'ui_app'

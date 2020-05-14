@@ -1,0 +1,73 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module" // Allows for the use of imports
+  },
+  "rules": {
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/no-array-index-key": 2,
+    "react/no-danger": 1,
+    "react/no-deprecated": 2,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-direct-mutation-state": 2,
+    "react/no-find-dom-node": 1,
+    "react/no-is-mounted": 1,
+    "react/no-multi-comp": 2,
+    "react/no-redundant-should-component-update": 2,
+    "react/no-render-return-value": 2,
+    "react/no-typos": 1,
+    "react/react-in-jsx-scope": 1,
+    "react/jsx-handler-names": 2,
+    "react/jsx-max-depth": [
+      1,
+      {
+        "max": 4
+      }
+    ],
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-fragments": 2,
+    "react/jsx-pascal-case": 2,
+    "react/jsx-boolean-value": 2,
+    "no-unused-vars": [2, { "vars": "local", "args": "after-used" }],
+    "no-magic-numbers": [2, { "ignore": [0, 1, 2, 10, 100] }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/eslint-recommended"],
+  "settings": {
+    "react": {
+      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [2, { "args": "none" }]
+      }
+    }
+  ],
+  "globals": {
+    "module": true,
+    "console": true,
+    "beforeAll": true,
+    "afterAll": true,
+    "window": true,
+    "jest": true
+  }
+}

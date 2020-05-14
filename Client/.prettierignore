@@ -1,0 +1,14 @@
+/.cache
+/.git
+/.idea
+/.vscode
+/node_modules
+/public
+.gitignore
+.prettierignore
+.prettierrc
+package-lock.json
+LICENSE
+*.graphql
+.graphqlconfig
+*.snap

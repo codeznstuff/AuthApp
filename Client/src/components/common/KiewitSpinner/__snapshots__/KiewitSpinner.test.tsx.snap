@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KiewitSpinner renders when show is true or not passsed in 1`] = `
+<div
+  class="spinnerContainer"
+>
+  <div
+    class="spinner-border"
+    role="status"
+  />
+</div>
+`;
